@@ -3,14 +3,14 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import Header from "@/components/headerComps/Header";
 import Footer from "@/components/Footer";
-import favicon from "../../public/favicon.ico"
+import favicon from "../../public/favicon.ico";
 import ContextWrapper from "@/context";
-
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Agnitio",
   description: "Agnitio assignment - built by Abdellah M.El Idrissi",
-  icons: [{ rel: 'icon', url: favicon.src }],
+  icons: [{ rel: "icon", url: favicon.src }],
 };
 
 export default function RootLayout({
@@ -23,6 +23,7 @@ export default function RootLayout({
           <ContextWrapper>
             <Header />
             {children}
+            <Toaster closeButton />
             <Footer />
           </ContextWrapper>
         </main>
