@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/headerComps/Header";
 import Footer from "@/components/Footer";
 import favicon from "../../public/favicon.ico"
+import ContextWrapper from "@/context";
 
 
 export const metadata: Metadata = {
@@ -18,10 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className}>
-        <main className="flex flex-col h-screen">
-          <Header />
-          {children}
-          <Footer />
+        <main className="flex flex-col min-h-screen">
+          <ContextWrapper>
+            <Header />
+            {children}
+            <Footer />
+          </ContextWrapper>
         </main>
       </body>
     </html>
