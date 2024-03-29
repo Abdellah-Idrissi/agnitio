@@ -84,7 +84,7 @@ export default function Positions({children}:{ children: React.ReactNode }) {
           ))}
         </div>
 
-        <div className="flex-1 h-full grid items-end absolute bottom-0 left-1/2 -translate-x-1/2 ">
+        <div className=" absolute bottom-0 left-1/2 -translate-x-1/2 ">
           {children}
         </div>
 
