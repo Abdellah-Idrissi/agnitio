@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Sheet,
   SheetClose,
@@ -8,12 +10,16 @@ import { AlignJustify, X } from "lucide-react";
 import Image from "next/image";
 import logo from "../../../public/logo.png";
 import { links } from "./Header";
+import { useState } from "react";
 import NavigationLink from "./NavigationLink";
 
 
 export default function MenuSheet() {
+  
+  const [open, setOpen] = useState(false)
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger className="md:hidden">
         <AlignJustify />
       </SheetTrigger>
@@ -32,9 +38,9 @@ export default function MenuSheet() {
           </SheetClose>
         </div>
 
-        <div className="mt-12  flex flex-col gap-y-6 justify-center  ">
-          {links.map((link) => (
-            <NavigationLink key={link} link={link} />
+        <div className="mt-12  flex flex-col gap-y-6 justify-center text-center  ">
+          {links.map((link) => ( 
+            <NavigationLink key={link} link={link} setOpen={setOpen} />
           ))}
         </div>
       </SheetContent>
