@@ -73,7 +73,7 @@ export function PositionForm() {
           </div>
 
           <div className="grid gap-2">
-            <Label htmlFor="opportunityInfo">opportunity Information</Label>
+            <Label htmlFor="opportunityInfo">Opportunity Information</Label>
             <Textarea id="opportunityInfo" name="opportunityInfo" placeholder="Write Opportunity Information" className="h-[150px] max-h-[200px]" />
           </div>
 
