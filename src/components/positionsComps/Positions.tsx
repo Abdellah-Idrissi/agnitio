@@ -70,19 +70,21 @@ export default function Positions({children}:{ children: React.ReactNode }) {
   )
 
   return (
-    <div className="flex-1 flex flex-col h-full">
+    <div className="flex-1 flex flex-col h-full relative pb-[60px] ">
 
         {filteredPositions.length === 0 && 
-          <div className={'text-sm text-center w-full text-neutral-600 flex-1 h-full grid items-end mt-5 pb-2 '}>No Positions available!</div>
+          <div className={'text-sm text-center w-full text-neutral-600 flex-1 h-full grid relative p-5 '}>
+            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">No Positions available!</span>
+          </div>
         }
 
-        <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">
           {filteredPositions.map((position) => (
             <PositionCard position={position} key={position.internalRef} />
           ))}
         </div>
 
-        <div className="flex-1 h-full grid items-end ">
+        <div className="flex-1 h-full grid items-end absolute bottom-0 left-1/2 -translate-x-1/2 ">
           {children}
         </div>
 

@@ -9,7 +9,7 @@ import {
 
 export function PositionsPagination() {
   return ( 
-    <Pagination className="mt-7">
+    <Pagination className="mt-7 ">
       <PaginationContent>
         <PaginationItem>
           <PaginationPrevious href="#" />
