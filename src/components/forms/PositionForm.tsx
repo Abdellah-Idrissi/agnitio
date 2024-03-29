@@ -126,7 +126,7 @@ export function PositionForm() {
               />
               <Button
                 type="button"
-                className="w-fit absolute top-0 left-0 px-[10px] border rounded-r-none hover:bg-neutral-100 cursor-default"
+                className="w-fit absolute top-0 left-0 px-[12px] border rounded-r-none hover:bg-neutral-100 cursor-default"
                 variant={"secondary"}
               >
                 Choose File
